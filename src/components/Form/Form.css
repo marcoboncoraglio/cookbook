@@ -1,3 +1,12 @@
 .control-label{
     font-size: 1.5em;
 }
+
+.enter-text{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.search-button{
+    margin-bottom: 0.5em;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header/Header'
 import SearchForm from './components/Form/Form'
+import CardView from './components/CardView/CardView'
 
 const app_id = '26e16d31';
 const app_key = '9bd19d494560bb58e2e560d6315d9f14'
@@ -26,13 +27,7 @@ class App extends Component {
       <div className="body">
         <Header></Header>
         <SearchForm getRecepie={this.getRecepie}></SearchForm> 
-        {this.state.recipies.map((entry) => {
-          return (
-            <div>
-              <img src={entry.recipe.image} alt={ entry.recipe.label }></img>
-              <p>{ entry.recipe.label }</p>
-            </div>)
-        })}
+        <CardView recipies={this.state.recipies}></CardView>
       </div>
     );
   }

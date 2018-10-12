@@ -6,15 +6,15 @@ const CardView = props => (
     <Grid bsClass="container nopadding">
         {props.recipies.map((entry) => {
             return (
-                <Col xs={12} md={3} bsClass="col">
+                <Col key={entry.recipe.uri} xs={12} md={3} bsClass="col">
                     <Thumbnail bsClass="thumbnail" src={entry.recipe.image} alt={entry.recipe.label} href={entry.recipe.url}>
-                        <p className="text-center">by { entry.recipe.label }</p>
+                        <h4>{ entry.recipe.label }</h4>
+                        <p>by {entry.recipe.source}</p>
                     </Thumbnail>                    
                 </Col>
                 )
             })}
     </Grid>
-    
 )
 
 export default CardView;

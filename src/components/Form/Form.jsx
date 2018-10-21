@@ -8,6 +8,7 @@ const SearchForm = props => (
             <FormGroup bsSize="large">
                 <ControlLabel bsClass="control-label">Enter a recipie, ingredient or any related keyword:</ControlLabel>
                 <FormControl bsClass="form-control enter-text" type="text" name="recipie" placeholder="Tomato Soup" ></FormControl>
+                <p align="right" bsClass="credits">Powered by Edamam</p>
                 <Button bsClass="search-btn btn" bsSize="large" type="submit">Search</Button>
             </FormGroup>
         </Form>
